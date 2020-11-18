@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<script type="module">
+
+    var enterButton = document.querySelector(".enter_box");
+    var enterText = document.getElementsByTagName("P")[0];
+    console.log(enterText);
+    enterButton.addEventListener("mouseover",function(){
+        enterButton.style.backgroundColor = "#575964";
+        enterText.style.color = "#C9CAD5";
+    });
+    enterButton.addEventListener("mouseleave",function(){
+        enterButton.style.backgroundColor = "transparent";
+        enterText.style.color = "#575964";
+    });
+
+
+
+</script>
+<style>
+
+@keyframes example {
+  from {background-color: black;}
+  to {background-color: transparent;}
+}
+
+*           {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: trasparent;
+            }
+
+body        {
+            animation-name: example;
+            animation-duration: 5s;
+            }
+
+.container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 60%;
+            margin: auto;
+            }
+
+.title_box {
+
+            }
+
+.enter_box {
+            border: 0.1em #ccc solid;
+            background-color: transparent;
+            width: 50px;
+            margin: auto;
+            color:#575964;
+             text-align: center;
+             font-family: Copperplate, Courier, Monaco;
+             flex-shrink: 1;
+            }
+
+p           {color:#575964;
+             text-align: center;
+             font-family: Copperplate, Courier, Monaco;
+             flex-shrink: 1;
+             }
+
+h1          {
+            color:#575964 ;
+            text-align: center;
+            font-family: Copperplate, Courier, Monaco;
+            letter-spacing: 21px;
+            line-height: 400%;
+            font-size:23px;
+            margin-bottom: 0px;
+            flex-shrink: 1;
+            }
+
+</style>
+<body>
+
+ <!-- URL for picture: https://unsplash.com/photos/Jrl_UQcZqOc -->
+
+<div class="container">
+        <div class="title_box">
+            <h1>THOMAS GUIZZETTI</h1>
+        </div>
+        <button class="enter_box" >
+           <p>enter</p>
+        </button>
+</div>
+
+</body>
+</html>

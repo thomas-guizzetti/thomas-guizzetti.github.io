@@ -1,7 +1,40 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+    <script type="text/javascript" src="script.js" defer="defer"></script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.style.css">
+    <title>Thomas Guizzetti GitHub repository main page</title>
+</head>
+
+<body style="margin: 2px">
+ <header class="buttonContainer">
+        <button class="tabsButtons" id="buttonOne">home</button>
+        <button class="tabsButtons" id="buttonTwo">why i am applying</button>
+        <button class="tabsButtons" id="buttonThree">about me</button>
+    </header>
+
+<div class="tabsContainer">
+        <div class="tabsPanels" style="visibility:visible" id="tabOne">
+                <div class="carrousel" style="top: 70%; display: flex; flex-direction: row; background-color: transparent; justify-content: space-evenly; align-items: center">
+                    <div style="background-color: #333A5E; width: 100px; height: 20px">
+                        <p style="font-size: 0.5e; color: white; text-align: center"> github</p>
+                    </div>
+                    <div style="background-color: #333A5E; width: 100px; height: 20px">
+                    </div>
+                    <div style="background-color: #333A5E; width: 100px; height: 20px">
+                    </div>
+                </div>
+            <h1>
+                    Hey, welcome to my website!
+                </h1>
+            <p1 style="font-size: 1em; margin: 25px 25px 25px 25px">
+                    Feel free to roam around as you like. You can use the details of my application in the  "Coding" tab above.
+            </p1>
+        </div>
+        <div class="tabsPanels" style="visibility:hidden" id="tabTwo"> Tab 2 </div>
+        <div class="tabsPanels" style="visibility:hidden" id="tabThree"> Tab 3 </div>
+</div>
+
 </body>
 </html>

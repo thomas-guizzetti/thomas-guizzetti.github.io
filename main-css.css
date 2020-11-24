@@ -95,16 +95,13 @@ body                {
 
 .GitCodeFreeButtons      {
                     background-color: #333A5E; 
-                    width: 100px; 
+                    margin-top: 15%;
+                    width: 120px; 
                     height: 20px; 
                     font-size: 0.5e; 
                     color: white; 
                     text-align: center;
-                    }
-
-.GitCodeFreeButtons button:onclick
-                    {
-                    background-color: #333A5E;
-                    color: white;
-                    font-size: 15px;
+                    font-family: Copperplate, Courier, Monaco;
+                    text-decoration: none;
+                    border-color: transparent;
                     }

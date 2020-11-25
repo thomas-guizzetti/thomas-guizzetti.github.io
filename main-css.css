@@ -83,8 +83,8 @@ body                {
 .carrousel          {
                     position: absolute;
                     background-color: #333A5E;
-                    top: 40%;
-                    bottom: 10%;
+                    top: 50%;
+                    bottom: 20%;
                     left: 20%;
                     right: 20%;
                     font-family: Copperplate, Courier, Monaco;
@@ -95,7 +95,6 @@ body                {
 
 .GitCodeFreeButtons      {
                     background-color: #333A5E; 
-                    margin-top: 15%;
                     width: 120px; 
                     height: 20px; 
                     font-size: 0.5e; 

@@ -80,16 +80,16 @@ body                {
                     color: white;
                     }
 
-.carrousel          {
+.GitCodeFreeContainer          {
                     position: absolute;
-                    background-color: #333A5E;
-                    top: 50%;
-                    bottom: 20%;
+                    background-color: transparent;
                     left: 20%;
                     right: 20%;
                     font-family: Copperplate, Courier, Monaco;
                     text-align: center;
                     font-size: 14px;
+                    border: 1px solid #333A5E;
+                    margin-top: 10%;
                     }
 
 

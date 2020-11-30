@@ -104,3 +104,16 @@ body                {
                     text-decoration: none;
                     border-color: transparent;
                     }
+
+.whiteboard         {
+                    background-color: white;
+                    left: 20%;
+                    right: 20%;
+                    font-family: Copperplate, Courier, Monaco;
+                    text-align: center;
+                    font-size: 14px;
+                    border: 1px solid #333A5E;
+                    margin-top: 15%;
+                    height: 50%;
+
+}

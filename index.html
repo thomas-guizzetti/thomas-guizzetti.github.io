@@ -46,18 +46,18 @@
         
         
         </div>
-    <!-- Tab 3, Add a text inoput where people can suggest artists/albums -->
+    <!-- Tab 3, Add a text inoput where people can suggest artists/albums and add an image carrousel of band -->
         <div class="tabsPanels" style="visibility:hidden; display: flex; flex-direction: column;" id="tabThree"> 
             <h1 style="border: 0.1em solid transparent; font-size: 20px; text-align: left; padding-left: 5%">A bit about me! :)</h1>
             <p1 style="border: 0.1em solid transparent; height:150px; width: 60%; text-align: left; font-size: 15px; padding-left: 0.5%">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p1>
         <div style="display: flex; flex-direction: row; justify-content: flex-start; margin-right: 0%">
-            <div class="whiteboard">Music whiteboard: <br><br><br>
+            <form id="musicForm" class="whiteboard">Music whiteboard: <br><br><br>
             <label>Artist name:</label><br>
-            <input type="text"><br>
+            <input type="text" id="artist"><br>
             <label>Song to listen:</label><br>
-            <input type="text"><br><br>
-            <input type="submit" value="Let's rock!">
-        </div>
+            <input type="text" id="song"><br><br>
+            <input type="submit" onclick="alert('Thanks for submitting your artist!')" value="Let's rock!">
+            </form>
         <div class="whiteboard" style="width: 70%"></div>
     </div>
         </div>

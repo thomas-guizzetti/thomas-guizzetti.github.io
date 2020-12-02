@@ -47,13 +47,10 @@ GitCodeFreeButtons[2].addEventListener("click", function(){
     GitCodeFreeButtons[0].style.borderColor = "#333A5E";
 });
 
-
 var artist = document.querySelector("#artist");
 var song = document.querySelector("#song");
 var musicForm = document.querySelector("#musicForm");
 var musicBoard = document.querySelector("#musicBoard");
-
-
 
 function musicSubmission(){
     if(artist.value != '' && song.value != ''){

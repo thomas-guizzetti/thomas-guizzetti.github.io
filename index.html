@@ -53,12 +53,15 @@
         <div style="display: flex; flex-direction: row; justify-content: flex-start; margin-right: 0%">
             <form id="musicForm" class="whiteboard">Music whiteboard: <br><br><br>
             <label>Artist name:</label><br>
-            <input type="text" id="artist"><br>
+            <input type="text" id="artist" name="artist"><br>
             <label>Song to listen:</label><br>
-            <input type="text" id="song"><br><br>
-            <input type="submit" onclick="alert('Thanks for submitting your artist!')" value="Let's rock!">
-            </form>
-        <div class="whiteboard" style="width: 70%"></div>
+            <input type="text" id="song" name="song"><br><br>
+            <input type="button" value="Let's rock!" onclick="musicSubmission()">
+        </form>
+        
+
+            
+        <div class="whiteboard" style="width: 70%" id="musicBoard"></div>
     </div>
         </div>
 </div>

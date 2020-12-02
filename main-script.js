@@ -48,18 +48,19 @@ GitCodeFreeButtons[2].addEventListener("click", function(){
 });
 
 
-var artist = document.querySelectorAll("#artist");
-var song = document.querySelectorAll("#song");
-var musicForm = document.querySelectorAll("#musicForm");
-
-musicForm.addEventListener("submit", (e) => {
-
-    e.preventDefault();
-    console.log("hello world!");
-});
+var artist = document.querySelector("#artist");
+var song = document.querySelector("#song");
+var musicForm = document.querySelector("#musicForm");
+var musicBoard = document.querySelector("#musicBoard");
 
 
 
+function musicSubmission(){
+    if(artist.value != '' && song.value != ''){
+    alert('Thanks for adding \'' + artist.value + ' - ' + song.value + '\' to the music whiteboard!');
+    musicBoard.textContent = musicBoard.textContent + '\n' + artist.value + ' - ' + song.value;
+    console.log(musicBoard.textContent);
+}}
 
 
 

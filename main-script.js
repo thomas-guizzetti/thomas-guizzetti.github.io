@@ -26,27 +26,6 @@ buttonThree.addEventListener("click", function(){
     tabThree.style.visibility = "visible";
 });
 
-//GitHub Button - Onlick event
-GitCodeFreeButtons[0].addEventListener("click", function(){
-        GitCodeFreeButtons[0].style.borderColor = "black";
-        GitCodeFreeButtons[1].style.borderColor = "#333A5E";
-        GitCodeFreeButtons[2].style.borderColor = "#333A5E";
-});
-
-//CodeWars Button - onlick event
-GitCodeFreeButtons[1].addEventListener("click", function(){
-    GitCodeFreeButtons[1].style.borderColor = "white";
-    GitCodeFreeButtons[0].style.borderColor = "#333A5E";
-    GitCodeFreeButtons[2].style.borderColor = "#333A5E";
-});
-
-//FreeCodeCamp Button - onlick event
-GitCodeFreeButtons[2].addEventListener("click", function(){
-    GitCodeFreeButtons[2].style.borderColor = "white";
-    GitCodeFreeButtons[1].style.borderColor = "#333A5E";
-    GitCodeFreeButtons[0].style.borderColor = "#333A5E";
-});
-
 var artist = document.querySelector("#artist");
 var song = document.querySelector("#song");
 var musicForm = document.querySelector("#musicForm");
@@ -60,4 +39,40 @@ function musicSubmission(){
 }}
 
 
+var lightswitchButtonNight = document.querySelector("#lightswitchButtonNight");
+var lightswitchButtonDay = document.querySelector("#lightswitchButtonDay");
+var h1Elements =  document.getElementsByTagName("h1");
+var p1Elements =  document.getElementsByTagName("p1");
+var tabsButtons = document.getElementsByClassName("tabsButtons");
+var buttonContainer = document.getElementsByClassName("buttonContainer");
 
+console.log(buttonContainer);
+
+
+
+lightswitchButtonNight.addEventListener("click", function(){
+    document.body.style.backgroundImage = "url(\"https:\/\/images.unsplash.com\/photo-1598668596133-5e7cd286e92a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2559&q=80\")";
+    for (var elements of h1Elements){
+    elements.style.color = "white";};
+    for (var elements of p1Elements){
+        elements.style.color = "white";};
+    for (var elements of tabsButtons){
+        elements.style.color = "white";};
+    buttonContainer[0].style.borderColor = "white";
+    
+})
+
+lightswitchButtonDay.addEventListener("click", function(){
+    document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80\")";
+    for (var elements of h1Elements){
+        elements.style.color = "#333A5E";};
+    for (var elements of p1Elements){
+            elements.style.color = "#333A5E";};
+    for (var elements of tabsButtons){
+        elements.style.color = "black";};
+    buttonContainer[0].style.borderColor = "#333A5E";
+})
+
+//To do: Complete the transition from night and day feature
+//To fix: fix transition from night to day errors, such as the button container for the tabs not switching back to original "hover" color  
+//To fix: fix the night background image so it doesn't repeat

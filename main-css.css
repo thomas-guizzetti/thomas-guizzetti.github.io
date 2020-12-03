@@ -123,3 +123,28 @@ body                {
                     width: 30%;
 
 }
+
+.lightswitchDiv        {
+                    position: absolute;
+                    border: 1px solid #333A5E;
+                    display: flex;
+                    left: 3%;
+                    right: 90%;
+                    justify-content: space-evenly;
+                    }
+
+
+.lightswitchButtons {
+                    background-color: #333A5E;
+                    border-radius: 50%;
+                    color: white;
+                    padding: 8px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    cursor: pointer;
+                    align-items: center;
+                  
+
+                    }

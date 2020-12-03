@@ -45,11 +45,14 @@ var h1Elements =  document.getElementsByTagName("h1");
 var p1Elements =  document.getElementsByTagName("p1");
 var tabsButtons = document.getElementsByClassName("tabsButtons");
 var buttonContainer = document.getElementsByClassName("buttonContainer");
+var gitCodeFreeContainer = document.getElementsByClassName("GitCodeFreeContainer");
+var gitCodeFreeButtons = document.getElementsByClassName("GitCodeFreeButtons");
 
-console.log(buttonContainer);
+
+console.log();
 
 
-
+//Transition from day to night
 lightswitchButtonNight.addEventListener("click", function(){
     document.body.style.backgroundImage = "url(\"https:\/\/images.unsplash.com\/photo-1598668596133-5e7cd286e92a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2559&q=80\")";
     for (var elements of h1Elements){
@@ -59,9 +62,12 @@ lightswitchButtonNight.addEventListener("click", function(){
     for (var elements of tabsButtons){
         elements.style.color = "white";};
     buttonContainer[0].style.borderColor = "white";
-    
+    for (var elements of gitCodeFreeButtons){
+        elements.style.backgroundColor = "white";
+        elements.style.color = "black";};
 })
 
+//Transition from night to day
 lightswitchButtonDay.addEventListener("click", function(){
     document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80\")";
     for (var elements of h1Elements){
@@ -71,6 +77,12 @@ lightswitchButtonDay.addEventListener("click", function(){
     for (var elements of tabsButtons){
         elements.style.color = "black";};
     buttonContainer[0].style.borderColor = "#333A5E";
+    gitCodeFreeContainer[0].style.borderColor = "#333A5E";
+    for (var elements of gitCodeFreeButtons){
+        elements.style.backgroundColor = "#333A5E";
+        elements.style.color = "white";};
+
+
 })
 
 //To do: Complete the transition from night and day feature

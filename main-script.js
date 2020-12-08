@@ -173,6 +173,7 @@ lightswitchButton.addEventListener("click", function(){
     if(clickCount % 2 == 0){
         //day css settings
         document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80\")";
+        document.body.style.backgroundPosition = "50% 22.5%";
         for (var elements of h1Elements){
             elements.style.color = "#333A5E";};
         for (var elements of p1Elements){
@@ -187,10 +188,12 @@ lightswitchButton.addEventListener("click", function(){
             elements.style.backgroundColor = "#333A5E";}
         for (var elements of aElements){
             elements.style.color = "white";}
+        lightswitchButton.style.backgroundImage = "url(\"https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-10-512.png\")";
         dayTimeButtonsEvent();}
     else {
         //night css settings
-        document.body.style.backgroundImage = "url(\"https:\/\/images.unsplash.com\/photo-1598668596133-5e7cd286e92a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2559&q=80\")";
+        document.body.style.backgroundImage = "url(\"https://images.unsplash.com\/photo-1598668596133-5e7cd286e92a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2559&q=80\")";
+        document.body.style.backgroundPosition = "50% 15.5%";
         for (var elements of h1Elements){
         elements.style.color = "white";};
         for (var elements of p1Elements){
@@ -204,6 +207,7 @@ lightswitchButton.addEventListener("click", function(){
             elements.style.backgroundColor = "white";}
         for (var elements of aElements){
                 elements.style.color = "#333A5E";};
+        lightswitchButton.style.backgroundImage = "url(\"https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather01-512.png\")";
         nightTimeButtonsEvent();
     };
 });

@@ -8,7 +8,11 @@ var GitButton = document.querySelector("#GitButton");
 var FreeCodeCampButton = document.querySelector("#FreeCodeCamp");
 var CodeWarsButton = document.querySelector("#CodeWarsButton");
 var GitCodeFreeButtons = document.querySelectorAll(".GitCodeFreeButtons");
+var gitCodeFreeContainer = document.getElementsByClassName("GitCodeFreeContainer");
+var buttonContainer = document.querySelector(".buttonContainer");
+var buttons = document.getElementsByClassName("tabsButtons");
 
+console.log(buttonContainer);
 
 buttonOne.addEventListener("click", function(){
     tabOne.style.visibility = "visible";
@@ -26,6 +30,123 @@ buttonThree.addEventListener("click", function(){
     tabThree.style.visibility = "visible";
 });
 
+
+function nightTimeButtonsEvent(){
+    buttonOne.addEventListener("mouseover", function(){
+        buttonOne.style.backgroundColor = "white";
+        buttonOne.style.color = "black";
+        buttonOne.style.fontSize = "15px";
+    });
+    buttonTwo.addEventListener("mouseover", function(){
+        buttonTwo.style.backgroundColor = "white";
+        buttonTwo.style.color = "black";
+        buttonTwo.style.fontSize = "15px";
+    });
+    buttonThree.addEventListener("mouseover", function(){
+        buttonThree.style.backgroundColor = "white";
+        buttonThree.style.color = "black";
+        buttonThree.style.fontSize = "15px";
+    });
+    buttonOne.addEventListener("mouseout", function(){
+        buttonOne.style.backgroundColor = "transparent";
+        buttonOne.style.color = "white";
+        buttoneOne.style.fontSize = "14px";
+    });
+    buttonTwo.addEventListener("mouseout", function(){
+        buttonTwo.style.backgroundColor = "transparent";
+        buttonTwo.style.color = "white";
+        buttoneTwo.style.fontSize = "14px";
+    });
+    buttonThree.addEventListener("mouseout", function(){
+        buttonThree.style.backgroundColor = "transparent";
+        buttonThree.style.color = "white";
+        buttonThree.style.fontSize = "14px";
+    });
+    buttonOne.addEventListener("focus", function(){
+        buttonOne.style.border = "1px solid white";
+        buttonOne.style.outline = "0";
+    });
+    buttonTwo.addEventListener("focus", function(){
+        buttonTwo.style.border = "1px solid white";
+        buttonTwo.style.outline = "0";
+    });
+    buttonThree.addEventListener("focus", function(){
+        buttonThree.style.border = "1px solid white";
+        buttonThree.style.outline = "0";
+    });
+    buttonOne.addEventListener("blur", function(){
+        buttonOne.style.border = "none";
+        buttonOne.style.outline = "0";
+    });
+    buttonTwo.addEventListener("blur", function(){
+        buttonTwo.style.border = "none";
+        buttonTwo.style.outline = "0";
+    });
+    buttonThree.addEventListener("blur", function(){
+        buttonThree.style.border = "none";
+        buttonThree.style.outline = "0";
+    });
+
+};
+
+function dayTimeButtonsEvent(){
+    buttonOne.addEventListener("mouseover", function(){
+        buttonOne.style.backgroundColor = "#333A5E";
+        buttonOne.style.color = "white";
+        buttonOne.style.fontSize = "15px";
+    });
+    buttonTwo.addEventListener("mouseover", function(){
+        buttonTwo.style.backgroundColor = "#333A5E";
+        buttonTwo.style.color = "white";
+        buttonTwo.style.fontSize = "15px";
+    });
+    buttonThree.addEventListener("mouseover", function(){
+        buttonThree.style.backgroundColor = "#333A5E";
+        buttonThree.style.color = "white";
+        buttonThree.style.fontSize = "15px";
+    });
+    buttonOne.addEventListener("mouseout", function(){
+        buttonOne.style.backgroundColor = "transparent";
+        buttonOne.style.color = "black";
+        buttoneOne.style.fontSize = "14px";
+    });
+    buttonTwo.addEventListener("mouseout", function(){
+        buttonTwo.style.backgroundColor = "transparent";
+        buttonTwo.style.color = "black";
+        buttoneTwo.style.fontSize = "14px";
+    });
+    buttonThree.addEventListener("mouseout", function(){
+        buttonThree.style.backgroundColor = "transparent";
+        buttonThree.style.color = "black";
+        buttonThree.style.fontSize = "14px";
+    });
+    buttonOne.addEventListener("focus", function(){
+        buttonOne.style.border = "1px solid #333A5E";
+        buttonOne.style.outline = "0";
+    });
+    buttonTwo.addEventListener("focus", function(){
+        buttonTwo.style.border = "1px solid #333A5E";
+        buttonTwo.style.outline = "0";
+    });
+    buttonThree.addEventListener("focus", function(){
+        buttonThree.style.border = "1px solid #333A5E";
+        buttonThree.style.outline = "0";
+    });
+    buttonOne.addEventListener("blur", function(){
+        buttonOne.style.border = "none";
+        buttonOne.style.outline = "0";
+    });
+    buttonTwo.addEventListener("blur", function(){
+        buttonTwo.style.border = "none";
+        buttonTwo.style.outline = "0";
+    });
+    buttonThree.addEventListener("blur", function(){
+        buttonThree.style.border = "none";
+        buttonThree.style.outline = "0";
+    });
+};
+
+dayTimeButtonsEvent();
 var artist = document.querySelector("#artist");
 var song = document.querySelector("#song");
 var musicForm = document.querySelector("#musicForm");
@@ -44,12 +165,10 @@ var lightswitchButtonDay = document.querySelector("#lightswitchButtonDay");
 var h1Elements =  document.getElementsByTagName("h1");
 var p1Elements =  document.getElementsByTagName("p1");
 var tabsButtons = document.getElementsByClassName("tabsButtons");
-var buttonContainer = document.getElementsByClassName("buttonContainer");
 var gitCodeFreeContainer = document.getElementsByClassName("GitCodeFreeContainer");
 var gitCodeFreeButtons = document.getElementsByClassName("GitCodeFreeButtons");
+var aElements = document.getElementsByTagName("a");
 
-
-console.log();
 
 
 //Transition from day to night
@@ -61,11 +180,15 @@ lightswitchButtonNight.addEventListener("click", function(){
         elements.style.color = "white";};
     for (var elements of tabsButtons){
         elements.style.color = "white";};
-    buttonContainer[0].style.borderColor = "white";
+    buttonContainer.style.borderColor = "white";
+    gitCodeFreeContainer[0].style.color = "white";
+    gitCodeFreeContainer[0].style.borderColor = "white";
     for (var elements of gitCodeFreeButtons){
-        elements.style.backgroundColor = "white";
-        elements.style.color = "black";};
-})
+        elements.style.backgroundColor = "white";}
+    for (var elements of aElements){
+            elements.style.color = "#333A5E";};
+    nightTimeButtonsEvent();
+     });
 
 //Transition from night to day
 lightswitchButtonDay.addEventListener("click", function(){
@@ -75,14 +198,16 @@ lightswitchButtonDay.addEventListener("click", function(){
     for (var elements of p1Elements){
             elements.style.color = "#333A5E";};
     for (var elements of tabsButtons){
-        elements.style.color = "black";};
-    buttonContainer[0].style.borderColor = "#333A5E";
-    gitCodeFreeContainer[0].style.borderColor = "#333A5E";
+        elements.style.color = "black";
+        elements.style.color = "black";                       };
+    buttonContainer.style.borderColor = "#333A5E";
+    gitCodeFreeContainer[0].style.color = "black";
+    gitCodeFreeContainer[0].style.borderColor = "#333A5E";    
     for (var elements of gitCodeFreeButtons){
-        elements.style.backgroundColor = "#333A5E";
-        elements.style.color = "white";};
-
-
+        elements.style.backgroundColor = "#333A5E";}
+    for (var elements of aElements){
+        elements.style.color = "white";}
+    dayTimeButtonsEvent();
 })
 
 //To do: Complete the transition from night and day feature

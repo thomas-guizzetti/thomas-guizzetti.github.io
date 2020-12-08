@@ -69,12 +69,13 @@ body                {
                     font-size: 14px;
                     }
 
-.buttonContainer button:hover
+/* .buttonContainer button:hover
                     {
                     background-color: #333A5E;
                     color: white;
                     font-size: 15px;
                     }
+                    
 
 .buttonContainer button:focus
                     {
@@ -82,7 +83,7 @@ body                {
                     background-color: #333A5E;
                     border: 1px solid white;
                     color: white;
-                    }
+                    }*/
 
 .GitCodeFreeContainer          {
                     position: absolute;

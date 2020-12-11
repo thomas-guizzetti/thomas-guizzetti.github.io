@@ -7,18 +7,23 @@
 h1, p1 {
     text-align: center;
     font-size: 4em;
-    color: #333A5E;
+    /*color: #333A5E;*/
+    color: rgb(26, 9, 0);
     font-family: Copperplate, Courier, Monaco;
     animation-name: fade-in;
     animation-duration: 3s;
 }
 
 body                {
-                    background-image: url("https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80");
+                    /*forest image b&w: https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80*/
+                    background: url("https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80") no-repeat center center fixed;
                     background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: 50% 22.5%;
-                    
+                    height: 100%;
+                    overflow: hidden; 
+
+                    /* background-position: 50% 22.5%;*/
+
+                    /* fix the position of background image when it's enlarged or smalled */
 
                     }
 
@@ -53,7 +58,7 @@ body                {
                     font-family: Copperplate, Courier, Monaco;
                     text-align: center;
                     font-size: 14px;
-                    border: 0px solid #525CC4;
+                    border: 0px solid rgb(26, 9, 0);
                     animation-name: fade-in;
                     animation-duration: 3s;
                     }
@@ -88,19 +93,21 @@ body                {
 
 .GitCodeFreeContainer          {
                     position: absolute;
-                    background-color: transparent;
+                    background: rgb(239,238,241);
+                    background: linear-gradient(90deg, rgba(239,238,241,1) 0%, rgba(227,217,211,1) 41%, rgba(238,238,238,1) 100%);                    
+                    opacity: 0.8;
                     left: 20%;
                     right: 20%;
                     font-family: Copperplate, Courier, Monaco;
                     text-align: center;
                     font-size: 14px;
-                    border: 1px solid #333A5E;
+                    border: 1px solid rgb(26, 9, 0);
                     margin-top: 10%;
                     }
 
 
 .GitCodeFreeButtons      {
-                    background-color: #333A5E; 
+                    background-color: rgb(26, 9, 0); 
                     width: 120px; 
                     height: 20px; 
                     font-size: 0.5e; 
@@ -115,7 +122,7 @@ body                {
                     background-color: white;
                     font-family: Copperplate, Courier, Monaco;
                     font-size: 14px;
-                    border: 1px solid #333A5E;
+                    border: 1px solid rgb(26, 9, 0);
                     margin-top: 15%;
                     margin-right: 0.1%;
                     text-align: left;

@@ -89,17 +89,17 @@ function nightTimeButtonsEvent(){
 
 function dayTimeButtonsEvent(){
     buttonOne.addEventListener("mouseover", function(){
-        buttonOne.style.backgroundColor = "#333A5E";
+        buttonOne.style.backgroundColor = "rgb(26, 9, 0)";
         buttonOne.style.color = "white";
         buttonOne.style.fontSize = "15px";
     });
     buttonTwo.addEventListener("mouseover", function(){
-        buttonTwo.style.backgroundColor = "#333A5E";
+        buttonTwo.style.backgroundColor = "rgb(26, 9, 0)";
         buttonTwo.style.color = "white";
         buttonTwo.style.fontSize = "15px";
     });
     buttonThree.addEventListener("mouseover", function(){
-        buttonThree.style.backgroundColor = "#333A5E";
+        buttonThree.style.backgroundColor = "rgb(26, 9, 0)";
         buttonThree.style.color = "white";
         buttonThree.style.fontSize = "15px";
     });
@@ -119,15 +119,15 @@ function dayTimeButtonsEvent(){
         buttonThree.style.fontSize = "14px";
     });
     buttonOne.addEventListener("focus", function(){
-        buttonOne.style.border = "1px solid #333A5E";
+        buttonOne.style.border = "1px solid rgb(26, 9, 0)";
         buttonOne.style.outline = "0";
     });
     buttonTwo.addEventListener("focus", function(){
-        buttonTwo.style.border = "1px solid #333A5E";
+        buttonTwo.style.border = "1px solid rgb(26, 9, 0)";
         buttonTwo.style.outline = "0";
     });
     buttonThree.addEventListener("focus", function(){
-        buttonThree.style.border = "1px solid #333A5E";
+        buttonThree.style.border = "1px solid rgb(26, 9, 0)";
         buttonThree.style.outline = "0";
     });
     buttonOne.addEventListener("blur", function(){
@@ -172,20 +172,21 @@ lightswitchButton.addEventListener("click", function(){
     clickCount++;
     if(clickCount % 2 == 0){
         //day css settings
-        document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80\")";
-        document.body.style.backgroundPosition = "50% 22.5%";
+        document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80\")";
         for (var elements of h1Elements){
-            elements.style.color = "#333A5E";};
+            elements.style.color = "rgb(26, 9, 0)";};
         for (var elements of p1Elements){
-                elements.style.color = "#333A5E";};
+                elements.style.color = "rgb(26, 9, 0)";};
         for (var elements of tabsButtons){
             elements.style.color = "black";
             elements.style.color = "black";};
-        buttonContainer.style.borderColor = "#333A5E";
+        buttonContainer.style.borderColor = "rgb(26, 9, 0)";
         gitCodeFreeContainer[0].style.color = "black";
-        gitCodeFreeContainer[0].style.borderColor = "#333A5E";    
+        gitCodeFreeContainer[0].style.background = " rgb(239,238,241)";
+        gitCodeFreeContainer[0].style.background = "linear-gradient(90deg, rgba(239,238,241,1) 0%, rgba(227,217,211,1) 41%, rgba(238,238,238,1) 100%)";
+        gitCodeFreeContainer[0].style.borderColor = "rgb(26, 9, 0)";    
         for (var elements of gitCodeFreeButtons){
-            elements.style.backgroundColor = "#333A5E";}
+            elements.style.backgroundColor = "rgb(26, 9, 0)";}
         for (var elements of aElements){
             elements.style.color = "white";}
         lightswitchButton.style.backgroundImage = "url(\"https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-10-512.png\")";
@@ -193,7 +194,6 @@ lightswitchButton.addEventListener("click", function(){
     else {
         //night css settings
         document.body.style.backgroundImage = "url(\"https://images.unsplash.com\/photo-1598668596133-5e7cd286e92a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2559&q=80\")";
-        document.body.style.backgroundPosition = "50% 15.5%";
         for (var elements of h1Elements){
         elements.style.color = "white";};
         for (var elements of p1Elements){
@@ -202,6 +202,7 @@ lightswitchButton.addEventListener("click", function(){
             elements.style.color = "white";};
         buttonContainer.style.borderColor = "white";
         gitCodeFreeContainer[0].style.color = "white";
+        gitCodeFreeContainer[0].style.background = "transparent";
         gitCodeFreeContainer[0].style.borderColor = "white";
         for (var elements of gitCodeFreeButtons){
             elements.style.backgroundColor = "white";}

@@ -239,8 +239,9 @@ slides[2].style.left = slideWidth * 2 + 'px';
 
 //slides[imageCount + 1].style.left = slideWidth + 'px';
 //slides[imageCount + 2].style.left = slideWidth * 2 + 'px';
-rightButton.addEventListener('click', function(){
-    slides[1].style.left = '0px';
+rightButton.addEventListener('click', function(){ 
+    track.style.transform = 'translateX(-' + slideWidth + 'px)';
+
 })
 
 

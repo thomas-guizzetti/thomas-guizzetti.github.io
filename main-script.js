@@ -158,6 +158,8 @@ function musicSubmission(){
 }}
 
 
+// switch from day to night - script below: 
+
 var lightswitchButton = document.querySelector("#lightswitchButton");
 var h1Elements =  document.getElementsByTagName("h1");
 var p1Elements =  document.getElementsByTagName("p1");
@@ -165,6 +167,7 @@ var tabsButtons = document.getElementsByClassName("tabsButtons");
 var gitCodeFreeContainer = document.getElementsByClassName("GitCodeFreeContainer");
 var gitCodeFreeButtons = document.getElementsByClassName("GitCodeFreeButtons");
 var aElements = document.getElementsByTagName("a");
+var carouselButtons = document.getElementsByClassName("carouselButtons");
 
 var clickCount = 0;
 
@@ -190,6 +193,9 @@ lightswitchButton.addEventListener("click", function(){
         for (var elements of aElements){
             elements.style.color = "white";}
         lightswitchButton.style.backgroundImage = "url(\"https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-10-512.png\")";
+        for(var elements of carouselButtons){
+            elements.style.backgroundColor = "transparent";
+        }
         dayTimeButtonsEvent();}
     else {
         //night css settings
@@ -209,10 +215,39 @@ lightswitchButton.addEventListener("click", function(){
         for (var elements of aElements){
                 elements.style.color = "#333A5E";};
         lightswitchButton.style.backgroundImage = "url(\"https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather01-512.png\")";
+        for(var elements of carouselButtons){
+            elements.style.backgroundColor = "white";
+        }
         nightTimeButtonsEvent();
     };
 });
 
-//To do: Complete the transition from night and day feature
-//To fix: fix transition from night to day errors, such as the button container for the tabs not switching back to original "hover" color  
-//To fix: fix the night background image so it doesn't repeat
+
+// carousel script below
+
+var track = document.querySelector(".carouselTrack");
+var slides = Array.from(track.children);
+var rightButton = document.getElementsByClassName("carouselButtons")[1];
+var leftButton = document.getElementsByClassName("carouselButtons")[0];
+var slideSize = slides[0].getBoundingClientRect();
+var slideWidth = slideSize.width; 
+
+slides[0].style.left = '0px';
+slides[1].style.left = slideWidth + 'px';
+slides[2].style.left = slideWidth * 2 + 'px';
+
+
+//slides[imageCount + 1].style.left = slideWidth + 'px';
+//slides[imageCount + 2].style.left = slideWidth * 2 + 'px';
+rightButton.addEventListener('click', function(){
+    slides[1].style.left = '0px';
+})
+
+
+console.log(track);
+console.log(slides);
+console.log(leftButton);
+console.log(slideWidth);
+
+//finish carousel
+//style carousel buttons 

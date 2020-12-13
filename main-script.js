@@ -236,14 +236,20 @@ slides[0].style.left = '0px';
 slides[1].style.left = slideWidth + 'px';
 slides[2].style.left = slideWidth * 2 + 'px';
 
-
+var imageCount = 1;
 //slides[imageCount + 1].style.left = slideWidth + 'px';
 //slides[imageCount + 2].style.left = slideWidth * 2 + 'px';
 rightButton.addEventListener('click', function(){ 
-    track.style.transform = 'translateX(-' + slideWidth + 'px)';
-
+    track.style.transform = 'translateX(-' + slideWidth * imageCount + 'px)';
+    imageCount += 1;
+    imageCount = imageCount % 4;
 })
 
+leftButton.addEventListener ('click', function(){
+    track.style.transform = 'translateX(' + slideWidth * imageCount +  'px)';
+    imageCount ++;
+    imageCount = imageCount % 4;
+})
 
 console.log(track);
 console.log(slides);

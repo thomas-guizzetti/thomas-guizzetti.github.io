@@ -231,30 +231,36 @@ var rightButton = document.getElementsByClassName("carouselButtons")[1];
 var leftButton = document.getElementsByClassName("carouselButtons")[0];
 var slideSize = slides[0].getBoundingClientRect();
 var slideWidth = slideSize.width; 
+var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
+var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
 
 slides[0].style.left = '0px';
 slides[1].style.left = slideWidth + 'px';
 slides[2].style.left = slideWidth * 2 + 'px';
 
+var countingArray = [0,1,2];
 var imageCount = 1;
+
+
+
 //slides[imageCount + 1].style.left = slideWidth + 'px';
 //slides[imageCount + 2].style.left = slideWidth * 2 + 'px';
 rightButton.addEventListener('click', function(){ 
-    track.style.transform = 'translateX(-' + slideWidth * imageCount + 'px)';
-    imageCount += 1;
-    imageCount = imageCount % 4;
-})
+    track.style.transform = 'translateX(-' + slideWidth * countingArray[imageCount] + 'px)';
+    imageCount ++;
+});
+
 
 leftButton.addEventListener ('click', function(){
-    track.style.transform = 'translateX(' + slideWidth * imageCount +  'px)';
-    imageCount ++;
-    imageCount = imageCount % 4;
-})
+    track.style.transform = 'translateX(-' + slideWidth * countingArray[imageCount - 1] + 'px)';
+    imageCount --;
+    });
+
 
 console.log(track);
 console.log(slides);
 console.log(leftButton);
 console.log(slideWidth);
 
-//finish carousel
+//fix carousel
 //style carousel buttons 

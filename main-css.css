@@ -14,6 +14,12 @@ h1, p1 {
     animation-duration: 3s;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: none;
+  color: #000000;
+}
+
 body                {
                     /*forest image b&w: https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80*/
                     background: url("https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80") no-repeat center center fixed;

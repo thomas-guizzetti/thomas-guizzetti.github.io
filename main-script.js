@@ -11,6 +11,11 @@ var GitCodeFreeButtons = document.querySelectorAll(".GitCodeFreeButtons");
 var gitCodeFreeContainer = document.getElementsByClassName("GitCodeFreeContainer");
 var buttonContainer = document.querySelector(".buttonContainer");
 var buttons = document.getElementsByClassName("tabsButtons");
+var tabLinks = Array.from(document.querySelectorAll("a")).slice(0,3);
+
+console.log(tabLinks);
+
+
 
 buttonOne.addEventListener("click", function(){
     tabOne.style.visibility = "visible";
@@ -286,3 +291,6 @@ leftButton.addEventListener ('click', function(){
 
 //fix buttons visible from homepage 
 //add tabs in different branches? 
+
+//Fix tabs 
+//make sure that all functions work well with the new tab system

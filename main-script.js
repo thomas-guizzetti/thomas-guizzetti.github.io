@@ -284,5 +284,5 @@ leftButton.addEventListener ('click', function(){
 
 
 
-//fix carousel
-//style carousel buttons 
+//fix buttons visible from homepage 
+//add tabs in different branches? 

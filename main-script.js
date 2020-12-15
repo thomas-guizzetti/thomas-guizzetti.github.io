@@ -238,29 +238,51 @@ slides[0].style.left = '0px';
 slides[1].style.left = slideWidth + 'px';
 slides[2].style.left = slideWidth * 2 + 'px';
 
-var countingArray = [0,1,2];
-var imageCount = 1;
-
-
+console.log(slides.length);
+var imageCount = 0;
 
 //slides[imageCount + 1].style.left = slideWidth + 'px';
 //slides[imageCount + 2].style.left = slideWidth * 2 + 'px';
 rightButton.addEventListener('click', function(){ 
-    track.style.transform = 'translateX(-' + slideWidth * countingArray[imageCount] + 'px)';
-    imageCount ++;
+    track.style.transform = 'translateX(-' + slideWidth * (imageCount + 1) + 'px)';
+    if(imageCount == slides.length - 1){}
+    else {imageCount ++;};
+    switch(imageCount){
+        case 0: carouselButtonLeft.style.visibility = "hidden";
+                carouselButtonRight.style.visibility = "visible";
+        break;
+        case 1: carouselButtonLeft.style.visibility = "visible";
+                carouselButtonRight.style.visibility = "visible";
+        break;
+        case 2: carouselButtonLeft.style.visibility = "visible";
+                carouselButtonRight.style.visibility = "hidden";
+        break;
+
+    }
+
 });
 
 
 leftButton.addEventListener ('click', function(){
-    track.style.transform = 'translateX(-' + slideWidth * countingArray[imageCount - 1] + 'px)';
+    track.style.transform = 'translateX(-' + slideWidth * (imageCount - 1) + 'px)';
     imageCount --;
+    switch(imageCount){
+        case 0: carouselButtonLeft.style.visibility = "hidden";
+                carouselButtonRight.style.visibility = "visible";
+        break;
+        case 1: carouselButtonLeft.style.visibility = "visible";
+                carouselButtonRight.style.visibility = "visible";
+        break;
+        case 2: carouselButtonLeft.style.visibility = "visible";
+                carouselButtonRight.style.visibility = "hidden";
+        break;
+
+    }
     });
 
 
-console.log(track);
-console.log(slides);
-console.log(leftButton);
-console.log(slideWidth);
+
+
 
 //fix carousel
 //style carousel buttons 

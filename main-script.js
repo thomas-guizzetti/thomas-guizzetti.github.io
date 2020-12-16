@@ -13,25 +13,9 @@ var buttonContainer = document.querySelector(".buttonContainer");
 var buttons = document.getElementsByClassName("tabsButtons");
 var tabLinks = Array.from(document.querySelectorAll("a")).slice(0,3);
 
-console.log(tabLinks);
+let nightTime = sessionStorage.getItem('nightTime');
 
-
-
-buttonOne.addEventListener("click", function(){
-    tabOne.style.visibility = "visible";
-    tabTwo.style.visibility = "hidden";
-    tabThree.style.visibility = "hidden";
-});
-buttonTwo.addEventListener("click", function(){
-    tabOne.style.visibility = "hidden";
-    tabTwo.style.visibility = "visible";
-    tabThree.style.visibility = "hidden";
-});
-buttonThree.addEventListener("click", function(){
-    tabOne.style.visibility = "hidden";
-    tabTwo.style.visibility = "hidden";
-    tabThree.style.visibility = "visible";
-});
+console.log(nightTime);
 
 
 function nightTimeButtonsEvent(){
@@ -174,37 +158,8 @@ var gitCodeFreeButtons = document.getElementsByClassName("GitCodeFreeButtons");
 var aElements = document.getElementsByTagName("a");
 var carouselButtons = document.getElementsByClassName("carouselButtons");
 
-var clickCount = 0;
-
-lightswitchButton.addEventListener("click", function(){
-    clickCount++;
-    if(clickCount % 2 == 0){
-        //day css settings
-        document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80\")";
-        for (var elements of h1Elements){
-            elements.style.color = "rgb(26, 9, 0)";};
-        for (var elements of p1Elements){
-                elements.style.color = "rgb(26, 9, 0)";};
-        for (var elements of tabsButtons){
-            elements.style.color = "black";
-            elements.style.color = "black";};
-        buttonContainer.style.borderColor = "rgb(26, 9, 0)";
-        gitCodeFreeContainer[0].style.color = "black";
-        gitCodeFreeContainer[0].style.background = " rgb(239,238,241)";
-        gitCodeFreeContainer[0].style.background = "linear-gradient(90deg, rgba(239,238,241,1) 0%, rgba(227,217,211,1) 41%, rgba(238,238,238,1) 100%)";
-        gitCodeFreeContainer[0].style.borderColor = "rgb(26, 9, 0)";    
-        for (var elements of gitCodeFreeButtons){
-            elements.style.backgroundColor = "rgb(26, 9, 0)";}
-        for (var elements of aElements){
-            elements.style.color = "white";}
-        lightswitchButton.style.backgroundImage = "url(\"https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-10-512.png\")";
-        for(var elements of carouselButtons){
-            elements.style.backgroundColor = "transparent";
-        }
-        dayTimeButtonsEvent();}
-    else {
-        //night css settings
-        document.body.style.backgroundImage = "url(\"https://images.unsplash.com\/photo-1598668596133-5e7cd286e92a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2559&q=80\")";
+function nightTimeMode(){
+    document.body.style.backgroundImage = "url(\"https://images.unsplash.com\/photo-1598668596133-5e7cd286e92a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2559&q=80\")";
         for (var elements of h1Elements){
         elements.style.color = "white";};
         for (var elements of p1Elements){
@@ -224,6 +179,48 @@ lightswitchButton.addEventListener("click", function(){
             elements.style.backgroundColor = "white";
         }
         nightTimeButtonsEvent();
+        sessionStorage.setItem('nightTime','enabled');
+}
+
+function dayTimeMode(){
+    document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80\")";
+    for (var elements of h1Elements){
+        elements.style.color = "rgb(26, 9, 0)";};
+    for (var elements of p1Elements){
+            elements.style.color = "rgb(26, 9, 0)";};
+    for (var elements of tabsButtons){
+        elements.style.color = "black";
+        elements.style.color = "black";};
+    buttonContainer.style.borderColor = "rgb(26, 9, 0)";
+    gitCodeFreeContainer[0].style.color = "black";
+    gitCodeFreeContainer[0].style.background = " rgb(239,238,241)";
+    gitCodeFreeContainer[0].style.background = "linear-gradient(90deg, rgba(239,238,241,1) 0%, rgba(227,217,211,1) 41%, rgba(238,238,238,1) 100%)";
+    gitCodeFreeContainer[0].style.borderColor = "rgb(26, 9, 0)";    
+    for (var elements of gitCodeFreeButtons){
+        elements.style.backgroundColor = "rgb(26, 9, 0)";}
+    for (var elements of aElements){
+        elements.style.color = "white";}
+    lightswitchButton.style.backgroundImage = "url(\"https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-10-512.png\")";
+    for(var elements of carouselButtons){
+        elements.style.backgroundColor = "transparent";
+    }
+    dayTimeButtonsEvent();
+    sessionStorage.setItem('nightTime', 'disabled');
+}
+
+if(nightTime === 'enabled'){
+    nightTimeMode();
+}
+
+lightswitchButton.addEventListener("click", function(){
+    nightTime = sessionStorage.getItem('nightTime');
+    if(nightTime !== 'enabled'){
+        //night css settings
+        nightTimeMode();
+    }
+    else {
+        //day css settings
+        dayTimeMode();
     };
 });
 

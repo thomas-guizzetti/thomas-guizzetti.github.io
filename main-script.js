@@ -15,9 +15,6 @@ var tabLinks = Array.from(document.querySelectorAll("a")).slice(0,3);
 
 let nightTime = sessionStorage.getItem('nightTime');
 
-console.log(nightTime);
-
-
 function nightTimeButtonsEvent(){
     buttonOne.addEventListener("mouseover", function(){
         buttonOne.style.backgroundColor = "white";
@@ -133,19 +130,6 @@ function dayTimeButtonsEvent(){
     });
 };
 
-dayTimeButtonsEvent();
-var artist = document.querySelector("#artist");
-var song = document.querySelector("#song");
-var musicForm = document.querySelector("#musicForm");
-var musicBoard = document.querySelector("#musicBoard");
-
-function musicSubmission(){
-    if(artist.value != '' && song.value != ''){
-    alert('Thanks for adding \'' + artist.value + ' - ' + song.value + '\' to the music whiteboard!');
-    musicBoard.textContent = musicBoard.textContent + '\n' + artist.value + ' - ' + song.value;
-    console.log(musicBoard.textContent);
-}}
-
 
 // switch from day to night - script below: 
 
@@ -180,7 +164,7 @@ function nightTimeMode(){
         }
         nightTimeButtonsEvent();
         sessionStorage.setItem('nightTime','enabled');
-}
+};
 
 function dayTimeMode(){
     document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80\")";
@@ -206,11 +190,14 @@ function dayTimeMode(){
     }
     dayTimeButtonsEvent();
     sessionStorage.setItem('nightTime', 'disabled');
-}
+};
 
 if(nightTime === 'enabled'){
     nightTimeMode();
 }
+else{
+    dayTimeMode();
+};
 
 lightswitchButton.addEventListener("click", function(){
     nightTime = sessionStorage.getItem('nightTime');

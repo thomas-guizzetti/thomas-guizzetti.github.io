@@ -1,6 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
     <script type="text/javascript" src="main-script.js" defer="defer"></script>
+    <script>
+        var track = document.querySelector(".carouselTrack");
+if(track != null){
+var slides = Array.from(track.children);};
+var rightButton = document.getElementsByClassName("carouselButtons")[1];
+var leftButton = document.getElementsByClassName("carouselButtons")[0];
+if(slides != undefined){
+var slideSize = slides[0].getBoundingClientRect();};
+if(slideSize != undefined){
+var slideWidth = slideSize.width; };
+var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
+var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
+
+slides[0].style.left = '0px';
+slides[1].style.left = slideWidth + 'px';
+slides[2].style.left = slideWidth * 2 + 'px';
+
+console.log(slides.length);
+var imageCount = 0;
+
+//slides[imageCount + 1].style.left = slideWidth + 'px';
+//slides[imageCount + 2].style.left = slideWidth * 2 + 'px';
+rightButton.addEventListener('click', function(){ 
+    track.style.transform = 'translateX(-' + slideWidth * (imageCount + 1) + 'px)';
+    if(imageCount == slides.length - 1){}
+    else {imageCount ++;};
+    switch(imageCount){
+        case 0: carouselButtonLeft.style.visibility = "hidden";
+                carouselButtonRight.style.visibility = "visible";
+        break;
+        case 1: carouselButtonLeft.style.visibility = "visible";
+                carouselButtonRight.style.visibility = "visible";
+        break;
+        case 2: carouselButtonLeft.style.visibility = "visible";
+                carouselButtonRight.style.visibility = "hidden";
+        break;
+
+    }
+
+});
+
+
+leftButton.addEventListener ('click', function(){
+    track.style.transform = 'translateX(-' + slideWidth * (imageCount - 1) + 'px)';
+    imageCount --;
+    switch(imageCount){
+        case 0: carouselButtonLeft.style.visibility = "hidden";
+                carouselButtonRight.style.visibility = "visible";
+        break;
+        case 1: carouselButtonLeft.style.visibility = "visible";
+                carouselButtonRight.style.visibility = "visible";
+        break;
+        case 2: carouselButtonLeft.style.visibility = "visible";
+                carouselButtonRight.style.visibility = "hidden";
+        break;
+
+    }
+    });
+    </script>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="main-css.css">

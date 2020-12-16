@@ -13,8 +13,10 @@ var buttonContainer = document.querySelector(".buttonContainer");
 var buttons = document.getElementsByClassName("tabsButtons");
 var tabLinks = Array.from(document.querySelectorAll("a")).slice(0,3);
 
-let nightTime = sessionStorage.getItem('nightTime');
+// switch from day to night - script below: 
 
+let nightTime = sessionStorage.getItem('nightTime');
+console.log(nightTime);
 function nightTimeButtonsEvent(){
     buttonOne.addEventListener("mouseover", function(){
         buttonOne.style.backgroundColor = "white";
@@ -34,12 +36,12 @@ function nightTimeButtonsEvent(){
     buttonOne.addEventListener("mouseout", function(){
         buttonOne.style.backgroundColor = "transparent";
         buttonOne.style.color = "white";
-        buttoneOne.style.fontSize = "14px";
+        buttonOne.style.fontSize = "14px";
     });
     buttonTwo.addEventListener("mouseout", function(){
         buttonTwo.style.backgroundColor = "transparent";
         buttonTwo.style.color = "white";
-        buttoneTwo.style.fontSize = "14px";
+        buttonTwo.style.fontSize = "14px";
     });
     buttonThree.addEventListener("mouseout", function(){
         buttonThree.style.backgroundColor = "transparent";
@@ -131,7 +133,6 @@ function dayTimeButtonsEvent(){
 };
 
 
-// switch from day to night - script below: 
 
 var lightswitchButton = document.querySelector("#lightswitchButton");
 var h1Elements =  document.getElementsByTagName("h1");
@@ -151,9 +152,10 @@ function nightTimeMode(){
         for (var elements of tabsButtons){
             elements.style.color = "white";};
         buttonContainer.style.borderColor = "white";
+        if(gitCodeFreeContainer[0] != undefined){
         gitCodeFreeContainer[0].style.color = "white";
         gitCodeFreeContainer[0].style.background = "transparent";
-        gitCodeFreeContainer[0].style.borderColor = "white";
+        gitCodeFreeContainer[0].style.borderColor = "white";};
         for (var elements of gitCodeFreeButtons){
             elements.style.backgroundColor = "white";}
         for (var elements of aElements){
@@ -176,10 +178,11 @@ function dayTimeMode(){
         elements.style.color = "black";
         elements.style.color = "black";};
     buttonContainer.style.borderColor = "rgb(26, 9, 0)";
+    if(gitCodeFreeContainer[0] != undefined){
     gitCodeFreeContainer[0].style.color = "black";
     gitCodeFreeContainer[0].style.background = " rgb(239,238,241)";
     gitCodeFreeContainer[0].style.background = "linear-gradient(90deg, rgba(239,238,241,1) 0%, rgba(227,217,211,1) 41%, rgba(238,238,238,1) 100%)";
-    gitCodeFreeContainer[0].style.borderColor = "rgb(26, 9, 0)";    
+    gitCodeFreeContainer[0].style.borderColor = "rgb(26, 9, 0)";};
     for (var elements of gitCodeFreeButtons){
         elements.style.backgroundColor = "rgb(26, 9, 0)";}
     for (var elements of aElements){
@@ -194,32 +197,42 @@ function dayTimeMode(){
 
 if(nightTime === 'enabled'){
     nightTimeMode();
+    nightTimeButtonsEvent();
+
 }
 else{
     dayTimeMode();
-};
+    dayTimeButtonsEvent();
+
+}
 
 lightswitchButton.addEventListener("click", function(){
     nightTime = sessionStorage.getItem('nightTime');
     if(nightTime !== 'enabled'){
         //night css settings
         nightTimeMode();
+        
     }
     else {
         //day css settings
         dayTimeMode();
     };
+    console.log(nightTime);
+
 });
 
 
 // carousel script below
-
+/*
 var track = document.querySelector(".carouselTrack");
-var slides = Array.from(track.children);
+if(track != null){
+var slides = Array.from(track.children);};
 var rightButton = document.getElementsByClassName("carouselButtons")[1];
 var leftButton = document.getElementsByClassName("carouselButtons")[0];
-var slideSize = slides[0].getBoundingClientRect();
-var slideWidth = slideSize.width; 
+if(slides != undefined){
+var slideSize = slides[0].getBoundingClientRect();};
+if(slideSize != undefined){
+var slideWidth = slideSize.width; };
 var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
 var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
 
@@ -269,7 +282,7 @@ leftButton.addEventListener ('click', function(){
     }
     });
 
-
+*/
 
 
 

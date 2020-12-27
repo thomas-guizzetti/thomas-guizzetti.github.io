@@ -13,10 +13,13 @@ var buttonContainer = document.querySelector(".buttonContainer");
 var buttons = document.getElementsByClassName("tabsButtons");
 var tabLinks = Array.from(document.querySelectorAll("a")).slice(0,3);
 
-// switch from day to night - script below: 
+console.log(buttons);
 
-let nightTime = sessionStorage.getItem('nightTime');
-console.log(nightTime);
+// SWITCH FROM DAY TO NIGHT
+
+let nightTime = sessionStorage.getItem('nightTime'); 
+
+//function for the hover and onclick effects on the tabs buttons, day and night
 function nightTimeButtonsEvent(){
     buttonOne.addEventListener("mouseover", function(){
         buttonOne.style.backgroundColor = "white";
@@ -133,7 +136,6 @@ function dayTimeButtonsEvent(){
 };
 
 
-
 var lightswitchButton = document.querySelector("#lightswitchButton");
 var h1Elements =  document.getElementsByTagName("h1");
 var p1Elements =  document.getElementsByTagName("p1");
@@ -149,7 +151,7 @@ function nightTimeMode(){
         elements.style.color = "white";};
         for (var elements of p1Elements){
             elements.style.color = "white";};
-        for (var elements of tabsButtons){
+        for (var elements of buttons){
             elements.style.color = "white";};
         buttonContainer.style.borderColor = "white";
         if(gitCodeFreeContainer[0] != undefined){
@@ -174,8 +176,7 @@ function dayTimeMode(){
         elements.style.color = "rgb(26, 9, 0)";};
     for (var elements of p1Elements){
             elements.style.color = "rgb(26, 9, 0)";};
-    for (var elements of tabsButtons){
-        elements.style.color = "black";
+    for (var elements of buttons){
         elements.style.color = "black";};
     buttonContainer.style.borderColor = "rgb(26, 9, 0)";
     if(gitCodeFreeContainer[0] != undefined){
@@ -195,15 +196,18 @@ function dayTimeMode(){
     sessionStorage.setItem('nightTime', 'disabled');
 };
 
+
 if(nightTime === 'enabled'){
     nightTimeMode();
     nightTimeButtonsEvent();
-
+    //Reset carousel image count to 0
+    var imageCount = 0;
 }
 else{
     dayTimeMode();
     dayTimeButtonsEvent();
-
+    //Reset carousel image count to 0
+    var imageCount = 0;
 }
 
 lightswitchButton.addEventListener("click", function(){
@@ -217,13 +221,14 @@ lightswitchButton.addEventListener("click", function(){
         //day css settings
         dayTimeMode();
     };
-    console.log(nightTime);
 
 });
 
+console.log(nightTime);
 
 // carousel script below
-/*
+
+
 var track = document.querySelector(".carouselTrack");
 if(track != null){
 var slides = Array.from(track.children);};
@@ -282,7 +287,7 @@ leftButton.addEventListener ('click', function(){
     }
     });
 
-*/
+
 
 
 

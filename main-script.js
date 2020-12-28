@@ -13,8 +13,6 @@ var buttonContainer = document.querySelector(".buttonContainer");
 var buttons = document.getElementsByClassName("tabsButtons");
 var tabLinks = Array.from(document.querySelectorAll("a")).slice(0,3);
 
-console.log(buttons);
-
 // SWITCH FROM DAY TO NIGHT
 
 let nightTime = sessionStorage.getItem('nightTime'); 
@@ -223,8 +221,6 @@ lightswitchButton.addEventListener("click", function(){
     };
 
 });
-
-console.log(nightTime);
 
 // carousel script below
 

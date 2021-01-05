@@ -59,9 +59,9 @@ body                {
 /* class for buttons that control the tabs*/
 .tabsButtons        {
                     background-color: transparent;
-                    width: 150px;
+                    width: 160px;
                     height: 25px;
-                    margin: 5px;
+                    margin: 1px;
                     font-family: Titillium, Courier, Monaco;
                     text-align: center;
                     font-size: 12px;
@@ -179,9 +179,9 @@ body                {
 /* class for the div that contains the carousel in the About Me section*/
 .carousel           {
                     position: relative;
-                    top: 120px;
-                    height: 300px;
-                    width: 600px;
+                    bottom: -25%;
+                    height: 50%;
+                    width: 50%;
                     padding: 0 auto;
                     margin: 0 auto;
                     display: grid;

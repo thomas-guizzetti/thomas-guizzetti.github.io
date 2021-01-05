@@ -15,8 +15,9 @@ h1, p1 {
 }
 
 a {
+  display: inline-block; /*inline-block allows the link to be clicked anywhere in the button*/
   text-decoration: none;
-  border-bottom: none;
+  border: none;
   color: #000000;
 }
 
@@ -33,10 +34,9 @@ body                {
 
                     }
 
-
 /*general class for the div that contains all the tabs*/
 .tabsContainer      {
-                    justify.content: center;
+                    justify-content: center;
                     background-color: black;
                     width: 100%;
                     height: 100%;
@@ -68,6 +68,7 @@ body                {
                     border: 0px solid rgb(26, 9, 0);
                     animation-name: fade-in;
                     animation-duration: 3s;
+                    cursor: pointer;
                     }
 
 /* class for the div of each tab*/
@@ -125,6 +126,7 @@ body                {
                     font-family: Copperplate, Courier, Monaco;
                     text-decoration: none;
                     border-color: transparent;
+                    align-items: center;
                     }
 
 /* class for the whiteboard idea to be used in the about me section*/
@@ -172,8 +174,6 @@ body                {
                     cursor: pointer;
                     align-items: center;
                     outline: none;
-                  
-
                     }
 
 /* class for the div that contains the carousel in the About Me section*/

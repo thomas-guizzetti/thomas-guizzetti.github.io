@@ -287,8 +287,6 @@ leftButton.addEventListener ('click', function(){
 
 
 
-//fix buttons visible from homepage 
-//add tabs in different branches? 
-
-//Fix tabs 
-//make sure that all functions work well with the new tab system
+//fix favicon icons
+//replace var with let or const
+//use more HTML5 semantic 

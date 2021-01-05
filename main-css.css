@@ -6,10 +6,10 @@
 
 h1, p1 {
     text-align: center;
-    font-size: 4em;
+    font-size: 3.5em;
     /*color: #333A5E;*/
     color: rgb(26, 9, 0);
-    font-family: Copperplate, Courier, Monaco;
+    font-family: Titillium, Courier, Monaco;
     animation-name: fade-in;
     animation-duration: 3s;
 }
@@ -62,9 +62,9 @@ body                {
                     width: 150px;
                     height: 25px;
                     margin: 5px;
-                    font-family: Copperplate, Courier, Monaco;
+                    font-family: Titillium, Courier, Monaco;
                     text-align: center;
-                    font-size: 14px;
+                    font-size: 12px;
                     border: 0px solid rgb(26, 9, 0);
                     animation-name: fade-in;
                     animation-duration: 3s;
@@ -78,7 +78,7 @@ body                {
                     width: 97%;
                     height: 80%;
                     margin: 1% 1% 1% 1%;
-                    font-family: Copperplate, Courier, Monaco;
+                    font-family: Titillium, Courier, Monaco;
                     text-align: center;
                     font-size: 14px;
                     }
@@ -108,7 +108,7 @@ body                {
                     opacity: 0.8;
                     left: 20%;
                     right: 20%;
-                    font-family: Copperplate, Courier, Monaco;
+                    font-family: Titillium, Courier, Monaco;
                     text-align: center;
                     font-size: 14px;
                     border: 1px solid rgb(26, 9, 0);
@@ -123,7 +123,7 @@ body                {
                     font-size: 0.5e; 
                     color: white; 
                     text-align: center;
-                    font-family: Copperplate, Courier, Monaco;
+                    font-family: Titillium, Courier, Monaco;
                     text-decoration: none;
                     border-color: transparent;
                     align-items: center;
@@ -132,7 +132,7 @@ body                {
 /* class for the whiteboard idea to be used in the about me section*/
 .whiteboard         {
                     background-color: white;
-                    font-family: Copperplate, Courier, Monaco;
+                    font-family: Titillium, Courier, Monaco;
                     font-size: 14px;
                     border: 1px solid rgb(26, 9, 0);
                     margin-top: 15%;
@@ -179,7 +179,7 @@ body                {
 /* class for the div that contains the carousel in the About Me section*/
 .carousel           {
                     position: relative;
-                    top: 80px;
+                    top: 120px;
                     height: 300px;
                     width: 600px;
                     padding: 0 auto;

@@ -4,7 +4,7 @@
 }*/
 
 
-h1, p1 {
+h1,p1{
     text-align: center;
     font-size: 3.5em;
     /*color: #333A5E;*/
@@ -12,7 +12,7 @@ h1, p1 {
     font-family: Titillium, Courier, Monaco;
     animation-name: fade-in;
     animation-duration: 3s;
-}
+};
 
 a {
   display: inline-block; /*inline-block allows the link to be clicked anywhere in the button*/
@@ -180,8 +180,8 @@ body                {
 .carousel           {
                     position: relative;
                     bottom: -25%;
-                    height: 50%;
-                    width: 50%;
+                    height: auto;
+                    width: 600px;
                     padding: 0 auto;
                     margin: 0 auto;
                     display: grid;

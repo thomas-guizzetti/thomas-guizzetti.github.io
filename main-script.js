@@ -290,5 +290,4 @@ leftButton.addEventListener ('click', function(){
 //fix favicon icons
 //replace var with let or const
 //use more HTML5 semantic 
-//find a better font? 
 //fix about me when using phones

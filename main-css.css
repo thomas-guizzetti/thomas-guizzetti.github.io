@@ -68,7 +68,7 @@ body                {
                     animation-name: fade-in;
                     animation-duration: 3s;
                     cursor: pointer;
-                    justify-content: center;
+                    /*justify-content: center;*/
                     }
 
 /* class for the div of each tab*/

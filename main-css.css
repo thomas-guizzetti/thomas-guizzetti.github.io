@@ -51,7 +51,7 @@ body                {
                     background-color: transparent;
                     align-items: center;
                     justify-content: center;
-                    height: 5vh;
+                    height: 6vh;
                     width: 100%;
                     border-bottom: 1px solid #333A5E;
                     }
@@ -59,16 +59,15 @@ body                {
 .tabsButtons        {
                     background-color: transparent;
                     width: 17vw;
-                    height: 3vh;
+                    height: 3.3vh;
                     margin: 1vh;
                     font-family: Titillium, Courier, Monaco;
                     text-align: center;
-                    font-size: 1.5vmin;
+                    font-size: 1.6vmin;
                     border: 0px solid rgb(26, 9, 0);
                     animation-name: fade-in;
                     animation-duration: 3s;
                     cursor: pointer;
-                    /*justify-content: center;*/
                     }
 
 /* class for the div of each tab*/
@@ -178,7 +177,7 @@ body                {
                     border-radius: 50%;
                     border: none;
                     color: white;
-                    padding: 2vh;
+                    padding: 2.5vh;
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;

@@ -22,32 +22,32 @@ function nightTimeButtonsEvent(){
     buttonOne.addEventListener("mouseover", function(){
         buttonOne.style.backgroundColor = "white";
         buttonOne.style.color = "black";
-        buttonOne.style.fontSize = "1.6vh";
+        buttonOne.style.fontSize = "1.7vh";
     });
     buttonTwo.addEventListener("mouseover", function(){
         buttonTwo.style.backgroundColor = "white";
         buttonTwo.style.color = "black";
-        buttonTwo.style.fontSize = "1.6vh";
+        buttonTwo.style.fontSize = "1.7vh";
     });
     buttonThree.addEventListener("mouseover", function(){
         buttonThree.style.backgroundColor = "white";
         buttonThree.style.color = "black";
-        buttonThree.style.fontSize = "1.6vh";
+        buttonThree.style.fontSize = "1.7vh";
     });
     buttonOne.addEventListener("mouseout", function(){
         buttonOne.style.backgroundColor = "transparent";
         buttonOne.style.color = "white";
-        buttonOne.style.fontSize = "1.5vh";
+        buttonOne.style.fontSize = "1.6vh";
     });
     buttonTwo.addEventListener("mouseout", function(){
         buttonTwo.style.backgroundColor = "transparent";
         buttonTwo.style.color = "white";
-        buttonTwo.style.fontSize = "1.5vh";
+        buttonTwo.style.fontSize = "1.6vh";
     });
     buttonThree.addEventListener("mouseout", function(){
         buttonThree.style.backgroundColor = "transparent";
         buttonThree.style.color = "white";
-        buttonThree.style.fontSize = "1.5vh";
+        buttonThree.style.fontSize = "1.6vh";
     });
     buttonOne.addEventListener("focus", function(){
         buttonOne.style.border = "1px solid white";
@@ -80,32 +80,32 @@ function dayTimeButtonsEvent(){
     buttonOne.addEventListener("mouseover", function(){
         buttonOne.style.backgroundColor = "rgb(26, 9, 0)";
         buttonOne.style.color = "white";
-        buttonOne.style.fontSize = "1.6vh";
+        buttonOne.style.fontSize = "1.7vh";
     });
     buttonTwo.addEventListener("mouseover", function(){
         buttonTwo.style.backgroundColor = "rgb(26, 9, 0)";
         buttonTwo.style.color = "white";
-        buttonTwo.style.fontSize = "1.6vh";
+        buttonTwo.style.fontSize = "1.7vh";
     });
     buttonThree.addEventListener("mouseover", function(){
         buttonThree.style.backgroundColor = "rgb(26, 9, 0)";
         buttonThree.style.color = "white";
-        buttonThree.style.fontSize = "1.6vh";
+        buttonThree.style.fontSize = "1.7vh";
     });
     buttonOne.addEventListener("mouseout", function(){
         buttonOne.style.backgroundColor = "transparent";
         buttonOne.style.color = "black";
-        buttonOne.style.fontSize = "1.5vh";
+        buttonOne.style.fontSize = "1.6vh";
     });
     buttonTwo.addEventListener("mouseout", function(){
         buttonTwo.style.backgroundColor = "transparent";
         buttonTwo.style.color = "black";
-        buttonTwo.style.fontSize = "1.5vh";
+        buttonTwo.style.fontSize = "1.6vh";
     });
     buttonThree.addEventListener("mouseout", function(){
         buttonThree.style.backgroundColor = "transparent";
         buttonThree.style.color = "black";
-        buttonThree.style.fontSize = "1.5vh";
+        buttonThree.style.fontSize = "1.6vh";
     });
     buttonOne.addEventListener("focus", function(){
         buttonOne.style.border = "1px solid rgb(26, 9, 0)";
@@ -288,7 +288,4 @@ leftButton.addEventListener ('click', function(){
 
 
 
-//fix favicon icons
-//replace var with let or const
-//use more HTML5 semantic 
-//fix about me when using phones
+//add more comments in the JS file

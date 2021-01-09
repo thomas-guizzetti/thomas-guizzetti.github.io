@@ -12,12 +12,27 @@ var gitCodeFreeContainer = document.getElementsByClassName("GitCodeFreeContainer
 var buttonContainer = document.querySelector(".buttonContainer");
 var buttons = document.getElementsByClassName("tabsButtons");
 var tabLinks = Array.from(document.querySelectorAll("a")).slice(0,3);
+var lightswitchButton = document.querySelector("#lightswitchButton");
+var h1Elements =  document.getElementsByTagName("h1");
+var p1Elements =  document.getElementsByTagName("p1");
+var tabsButtons = document.getElementsByClassName("tabsButtons");
+var gitCodeFreeContainer = document.getElementsByClassName("GitCodeFreeContainer");
+var gitCodeFreeButtons = document.getElementsByClassName("GitCodeFreeButtons");
+var aElements = document.getElementsByTagName("a");
+var carouselButtons = document.getElementsByClassName("carouselButtons");
+var whyAmIApplyingParagraphs = document.getElementsByClassName("whyAmIApplyingParagraphs");
 
-// SWITCH FROM DAY TO NIGHT
+// START OF THE SCRIPT FOR THE NIGHT TIME AND DAY TIME MODES
 
+//Session storage saves the night time or day time settings of the page, in particular when switching tabs
+//Session storage will last until the user's session is finished (eg closes the website)
+
+//When the webpage loads, it assignes to nightTime the value of the keyname (in this case 'nightTime'). 
+//When loading for the first time, value of nightTime is 'null' since the keyname's value is 'null'
 let nightTime = sessionStorage.getItem('nightTime'); 
 
-//function for the hover and onclick effects on the tabs buttons, day and night
+//The functions below instruct what should happen when we hover over the tab buttons. 
+//In particular, nightTimeButtonsEvent instructs what happens when in night time mode and dayTimeButtonsEvent what happens when in day time mode
 function nightTimeButtonsEvent(){
     buttonOne.addEventListener("mouseover", function(){
         buttonOne.style.backgroundColor = "white";
@@ -133,16 +148,8 @@ function dayTimeButtonsEvent(){
     });
 };
 
-
-var lightswitchButton = document.querySelector("#lightswitchButton");
-var h1Elements =  document.getElementsByTagName("h1");
-var p1Elements =  document.getElementsByTagName("p1");
-var tabsButtons = document.getElementsByClassName("tabsButtons");
-var gitCodeFreeContainer = document.getElementsByClassName("GitCodeFreeContainer");
-var gitCodeFreeButtons = document.getElementsByClassName("GitCodeFreeButtons");
-var aElements = document.getElementsByTagName("a");
-var carouselButtons = document.getElementsByClassName("carouselButtons");
-
+//The functions below is responsible for changing the css and styles of the HTML when night time mode is enabled
+//When nightTimeMode is called and hence night time mode is enabled, we also set the value of keyname 'nightTime' to 'enabled' using sessionStorage.setItem()
 function nightTimeMode(){
     document.body.style.backgroundImage = "url(\"https://images.unsplash.com\/photo-1598668596133-5e7cd286e92a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2559&q=80\")";
         for (var elements of h1Elements){
@@ -164,10 +171,16 @@ function nightTimeMode(){
         for(var elements of carouselButtons){
             elements.style.backgroundColor = "white";
         }
+        for (var elements of whyAmIApplyingParagraphs){
+            elements.style.background = "transparent";
+        }
         nightTimeButtonsEvent();
         sessionStorage.setItem('nightTime','enabled');
         
 };
+
+//The functions below is responsible for changing the css and styles of the HTML when night time mode is disabled
+//When dayTimeMode is called and hence night time mode is disabled, we also set the value of keyname 'nightTime' to 'disabled' using sessionStorage.setItem()
 
 function dayTimeMode(){
     document.body.style.backgroundImage = "url(\"https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80\")";
@@ -191,9 +204,18 @@ function dayTimeMode(){
     for(var elements of carouselButtons){
         elements.style.backgroundColor = "transparent";
     }
+    for (var elements of whyAmIApplyingParagraphs){
+        elements.style.background = "linear-gradient(90deg, rgba(239,238,241,0) 0%, rgba(227,217,211,0.5) 41%, rgba(238,238,2380, 0) 100%)";
+    }
+
     dayTimeButtonsEvent();
     sessionStorage.setItem('nightTime', 'disabled');
 };
+
+
+//The below conditional statement ensures that when we reload the page, if nightTime is 'enabled', nightTimeMode and nightTimeButtonsEvents are called
+//And hence the CSS and style of the HTML changes to night time mode.
+//In order for the carousel to work, everytime we reload the page we also want to reset the imageCount. This ensures that the carousel resets to the first image
 
 
 if(nightTime === 'enabled'){
@@ -209,7 +231,12 @@ else{
     var imageCount = 0;
 }
 
+//Below the instructions for what happens when the user clicks on the light switch:
+//1. We update nightTime's value by calling it again
+//2. If nightTime is disabled (and hence the page is in day time mode), call nightTimeMode 
+//3. If else nightTime is enabled (and hence the page is in night time mode), call dayTimeMode
 lightswitchButton.addEventListener("click", function(){
+    //when we click on lightswitch, we need to update nightTime's value
     nightTime = sessionStorage.getItem('nightTime');
     if(nightTime !== 'enabled'){
         //night css settings
@@ -223,8 +250,10 @@ lightswitchButton.addEventListener("click", function(){
 
 });
 
-// carousel script below
+// END OF THE SCRIPT FOR THE NIGHT TIME AND DAY TIME MODES
 
+
+//START OF THE SCRIPT FOR THE CAROUSEL
 
 var track = document.querySelector(".carouselTrack");
 if(track != null){
@@ -232,25 +261,32 @@ var slides = Array.from(track.children);};
 var rightButton = document.getElementsByClassName("carouselButtons")[1];
 var leftButton = document.getElementsByClassName("carouselButtons")[0];
 if(slides != undefined){
+//getBoundingClientRect returns the size of the element slides[0]
 var slideSize = slides[0].getBoundingClientRect();};
 if(slideSize != undefined){
 var slideWidth = slideSize.width; };
 var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
 var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
 
+//The below ensures that the carousel is running only when we're on the About Me tab
+if(track != null && slides != undefined && slideSize != undefined){
+
+//This puts the slides one next to each other 
 slides[0].style.left = '0px';
 slides[1].style.left = slideWidth + 'px';
 slides[2].style.left = slideWidth * 2 + 'px';
 
-console.log(slides.length);
 var imageCount = 0;
 
-//slides[imageCount + 1].style.left = slideWidth + 'px';
-//slides[imageCount + 2].style.left = slideWidth * 2 + 'px';
+//The below instructs what happens to the carousel when the rightButton is clicked on
 rightButton.addEventListener('click', function(){ 
+    //The below moves the slides from right to left
     track.style.transform = 'translateX(-' + slideWidth * (imageCount + 1) + 'px)';
+    //The below stops imageCount from increasing when we arrive at the last slide of the carousel
     if(imageCount == slides.length - 1){}
+    //the below inscreases imageCount when we're at the start or the middle of the carousel
     else {imageCount ++;};
+    //The below hides the left and right buttons if we are respectively on the first and last slide of the carousel
     switch(imageCount){
         case 0: carouselButtonLeft.style.visibility = "hidden";
                 carouselButtonRight.style.visibility = "visible";
@@ -266,10 +302,12 @@ rightButton.addEventListener('click', function(){
 
 });
 
-
+//The below instructs what happens to the carousel when the leftButton is clicked on
 leftButton.addEventListener ('click', function(){
+    //The below moves the slides from left to right
     track.style.transform = 'translateX(-' + slideWidth * (imageCount - 1) + 'px)';
     imageCount --;
+    //The below hides the left and right buttons if we are respectively on the first and last slide of the carousel
     switch(imageCount){
         case 0: carouselButtonLeft.style.visibility = "hidden";
                 carouselButtonRight.style.visibility = "visible";
@@ -282,10 +320,16 @@ leftButton.addEventListener ('click', function(){
         break;
 
     }
-    });
+    });}
 
 
+//END OF THE SCRIPT FOR THE CAROUSEL
 
 
 
 //add more comments in the JS file
+//Open on different browsers
+//change background of Why I am Applying in night time setting
+//mention the credits of the images 
+//add music link for all of my mistakes are made
+//check erros in ispect

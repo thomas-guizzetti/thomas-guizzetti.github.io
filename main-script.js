@@ -325,11 +325,24 @@ leftButton.addEventListener ('click', function(){
 
 //END OF THE SCRIPT FOR THE CAROUSEL
 
+//START OF THE SCRIPT FOR POP-UP IMAGE CREDIT
+
+var popUpButtonOne = document.getElementsByClassName("credits")[0];
+var popUpButtonTwo = document.getElementsByClassName("creditsPopUp")[0];
+
+popUpButtonOne.addEventListener('click', function(){
+    popUpButtonOne.style.visibility = "hidden";
+    popUpButtonTwo.style.visibility = "visible";
+});
+
+popUpButtonTwo.addEventListener('click', function(){
+    popUpButtonOne.style.visibility = "visible";
+    popUpButtonTwo.style.visibility = "hidden";
+});
 
 
 //add more comments in the JS file
 //Open on different browsers
-//change background of Why I am Applying in night time setting
 //mention the credits of the images 
 //add music link for all of my mistakes are made
 //check erros in ispect

@@ -253,3 +253,32 @@ body                {
                     font-size: 1.8vmin; 
                     background: linear-gradient(90deg, rgba(239,238,241,0) 0%, rgba(227,217,211,0.5) 41%, rgba(238,238,2380, 0) 100%);
 }
+
+.credits {
+                    visibility: visible;
+                    position: absolute;
+                    left: 35%;
+                    width: 30%;
+                    height: 2vh;
+                    background-color: white;
+                    opacity: 0.2;
+                    bottom: -10%;
+                    justify-self: center;
+                    color: black;
+                    font-size: 1.5vh;
+                    cursor: pointer;
+}
+
+.creditsPopUp {
+                    visibility: hidden;
+                    position: absolute;
+                    left: 35%;
+                    width: 30%;
+                    height: auto;
+                    bottom: -10%;
+                    background-color: white;
+                    opacity: 0.2;
+                    font-size: 1.5vh;
+                    cursor: pointer;
+
+}

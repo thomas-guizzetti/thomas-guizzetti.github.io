@@ -166,8 +166,6 @@ body                {
                     right: 94%;
                     }
 
-/* moon: "https://img.icons8.com/ios/50/000000/moon-man.png"
-   sun: "https://img.icons8.com/doodle/48/000000/sun--v1.png"*/
 
 /* class for the lightswitch button that control the dark mode */
 .lightswitchButton {
@@ -257,28 +255,28 @@ body                {
 .credits {
                     visibility: visible;
                     position: absolute;
-                    left: 35%;
-                    width: 30%;
-                    height: 2vh;
+                    left: 25%;
+                    width: 50%;
+                    height: auto;
                     background-color: white;
                     opacity: 0.2;
                     bottom: -10%;
                     justify-self: center;
                     color: black;
-                    font-size: 1.5vh;
+                    font-size: 1.3vh;
                     cursor: pointer;
 }
 
 .creditsPopUp {
                     visibility: hidden;
                     position: absolute;
-                    left: 35%;
-                    width: 30%;
+                    left: 25%;
+                    width: 50%;
                     height: auto;
                     bottom: -10%;
                     background-color: white;
                     opacity: 0.2;
-                    font-size: 1.5vh;
+                    font-size: 1.3vh;
                     cursor: pointer;
 
 }

@@ -21,6 +21,7 @@ var gitCodeFreeButtons = document.getElementsByClassName("GitCodeFreeButtons");
 var aElements = document.getElementsByTagName("a");
 var carouselButtons = document.getElementsByClassName("carouselButtons");
 var whyAmIApplyingParagraphs = document.getElementsByClassName("whyAmIApplyingParagraphs");
+var musicLink = document.querySelector("#musicLink");
 
 // START OF THE SCRIPT FOR THE NIGHT TIME AND DAY TIME MODES
 
@@ -95,32 +96,32 @@ function dayTimeButtonsEvent(){
     buttonOne.addEventListener("mouseover", function(){
         buttonOne.style.backgroundColor = "rgb(26, 9, 0)";
         buttonOne.style.color = "white";
-        buttonOne.style.fontSize = "1.7vh";
+        buttonOne.style.fontSize = "1.7vmin";
     });
     buttonTwo.addEventListener("mouseover", function(){
         buttonTwo.style.backgroundColor = "rgb(26, 9, 0)";
         buttonTwo.style.color = "white";
-        buttonTwo.style.fontSize = "1.7vh";
+        buttonTwo.style.fontSize = "1.7vmin";
     });
     buttonThree.addEventListener("mouseover", function(){
         buttonThree.style.backgroundColor = "rgb(26, 9, 0)";
         buttonThree.style.color = "white";
-        buttonThree.style.fontSize = "1.7vh";
+        buttonThree.style.fontSize = "1.7vmin";
     });
     buttonOne.addEventListener("mouseout", function(){
         buttonOne.style.backgroundColor = "transparent";
         buttonOne.style.color = "black";
-        buttonOne.style.fontSize = "1.6vh";
+        buttonOne.style.fontSize = "1.6vmin";
     });
     buttonTwo.addEventListener("mouseout", function(){
         buttonTwo.style.backgroundColor = "transparent";
         buttonTwo.style.color = "black";
-        buttonTwo.style.fontSize = "1.6vh";
+        buttonTwo.style.fontSize = "1.6vmin";
     });
     buttonThree.addEventListener("mouseout", function(){
         buttonThree.style.backgroundColor = "transparent";
         buttonThree.style.color = "black";
-        buttonThree.style.fontSize = "1.6vh";
+        buttonThree.style.fontSize = "1.6vmin";
     });
     buttonOne.addEventListener("focus", function(){
         buttonOne.style.border = "1px solid rgb(26, 9, 0)";
@@ -174,6 +175,9 @@ function nightTimeMode(){
         for (var elements of whyAmIApplyingParagraphs){
             elements.style.background = "transparent";
         }
+        if(musicLink != null){
+        musicLink.style.color = "white";};
+
         nightTimeButtonsEvent();
         sessionStorage.setItem('nightTime','enabled');
         
@@ -207,6 +211,8 @@ function dayTimeMode(){
     for (var elements of whyAmIApplyingParagraphs){
         elements.style.background = "linear-gradient(90deg, rgba(239,238,241,0) 0%, rgba(227,217,211,0.5) 41%, rgba(238,238,2380, 0) 100%)";
     }
+    if(musicLink != null){
+        musicLink.style.color = "black";};
 
     dayTimeButtonsEvent();
     sessionStorage.setItem('nightTime', 'disabled');
@@ -327,8 +333,11 @@ leftButton.addEventListener ('click', function(){
 
 //START OF THE SCRIPT FOR POP-UP IMAGE CREDIT
 
-var popUpButtonOne = document.getElementsByClassName("credits")[0];
-var popUpButtonTwo = document.getElementsByClassName("creditsPopUp")[0];
+
+var popUpButtonOne = document.querySelector(".credits");
+var popUpButtonTwo = document.querySelector(".creditsPopUp");
+
+if( popUpButtonOne != null && popUpButtonTwo != null){
 
 popUpButtonOne.addEventListener('click', function(){
     popUpButtonOne.style.visibility = "hidden";
@@ -338,11 +347,9 @@ popUpButtonOne.addEventListener('click', function(){
 popUpButtonTwo.addEventListener('click', function(){
     popUpButtonOne.style.visibility = "visible";
     popUpButtonTwo.style.visibility = "hidden";
-});
+});}
 
 
 //add more comments in the JS file
 //Open on different browsers
-//mention the credits of the images 
 //add music link for all of my mistakes are made
-//check erros in ispect

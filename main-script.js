@@ -273,6 +273,7 @@ if(slideSize != undefined){
 var slideWidth = slideSize.width; };
 var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
 var carouselButtonLeft = document.querySelector("#carouselButtonLeft");
+var imageCount = 0;
 
 //The below ensures that the carousel is running only when we're on the About Me tab
 if(track != null && slides != undefined && slideSize != undefined){
@@ -282,7 +283,6 @@ slides[0].style.left = '0px';
 slides[1].style.left = slideWidth + 'px';
 slides[2].style.left = slideWidth * 2 + 'px';
 
-var imageCount = 0;
 
 //The below instructs what happens to the carousel when the rightButton is clicked on
 rightButton.addEventListener('click', function(){ 

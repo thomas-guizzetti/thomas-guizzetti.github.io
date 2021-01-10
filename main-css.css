@@ -117,11 +117,14 @@ body                {
 /* class for the buttons that contain the GitHub, CodeWars and FreeCodeCamp links */
 .GitCodeFreeButtons      {
                     background-color: rgb(26, 9, 0); 
-                    width: 8vw; 
+                    width: 12vw; 
                     height: 2.5vh; 
-                    font-size: 1vw; 
+                    font-size: 1.5vmin; 
                     color: white; 
                     text-align: center;
+                    align-content: center;
+                    margin-top: auto;
+                    margin-bottom: auto;
                     font-family: Titillium, Courier, Monaco;
                     text-decoration: none;
                     border-color: transparent;

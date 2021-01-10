@@ -349,6 +349,8 @@ popUpButtonTwo.addEventListener('click', function(){
     popUpButtonTwo.style.visibility = "hidden";
 });}
 
+//END OF THE SCRIPT FOR POP-UP IMAGE CREDIT
+
 
 //add more comments in the JS file
 //Open on different browsers
